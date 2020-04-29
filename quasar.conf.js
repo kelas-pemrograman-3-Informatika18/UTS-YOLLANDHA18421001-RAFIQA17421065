@@ -61,7 +61,12 @@ module.exports = function (ctx) {
         'QForm',
         'QInput',
         'QCard',
-        'QCardSection'
+        'QCardSection',
+        'QTable',
+        'QTh',
+        'QTr',
+        'QTd'
+        
       ],
 
       directives: [
@@ -193,7 +198,7 @@ module.exports = function (ctx) {
       builder: {
         // https://www.electron.build/configuration/configuration
 
-        appId: 'tugasfiqa1'
+        appId: 'tokobaju_yollafiqa'
       },
 
       // More info: https://quasar.dev/quasar-cli/developing-electron-apps/node-integration

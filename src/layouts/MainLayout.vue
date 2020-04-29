@@ -1,21 +1,21 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
-      <q-toolbar>
+    <q-header unelevated>
+      <q-toolbar class="bg-grey">
         <q-btn
           flat
           dense
           round
           icon="menu"
-          aria-label="Menu"
+          aria-label="menu"
           @click="leftDrawerOpen = !leftDrawerOpen"
         />
 
         <q-toolbar-title>
-          Quasar App
+          Fiqyol Branded Clothes
         </q-toolbar-title>
 
-        <div>Quasar v{{ $q.version }}</div>
+        <div>Contact Person 082212345678</div>
       </q-toolbar>
     </q-header>
 
@@ -30,7 +30,40 @@
           header
           class="text-grey-8"
         >
-          Essential Links
+          Ready From A To Z
+        </q-item-label>
+        <q-item clickable active-class="active" exact v-ripple :to="{ name: 'home'}">
+          <q-item-section avatar>
+            <q-icon name="home" />
+          </q-item-section>
+
+          <q-item-section>
+            Menu
+          </q-item-section>
+        </q-item>
+        <q-item clickable active-class="active" exact v-ripple :to="{ name: 'list'}">
+          <q-item-section avatar>
+            <q-icon name="list" />
+          </q-item-section>
+
+          <q-item-section>
+            Shopping Lists
+          </q-item-section>
+        </q-item>
+        <q-item clickable active-class="active" exact v-ripple :to="{ name: 'form'}">
+          <q-item-section avatar>
+            <q-icon name="input" />
+          </q-item-section>
+
+          <q-item-section>
+            Input Form Shopping
+          </q-item-section>
+        </q-item>
+        <q-item-label
+          header
+          class="text-grey-8"
+        >
+          About US
         </q-item-label>
         <EssentialLink
           v-for="link in essentialLinks"
@@ -40,7 +73,7 @@
       </q-list>
     </q-drawer>
 
-    <q-page-container>
+    <q-page-container class="bg-grey-3">
       <router-view />
     </q-page-container>
   </q-layout>
@@ -61,40 +94,16 @@ export default {
       leftDrawerOpen: false,
       essentialLinks: [
         {
-          title: 'Docs',
-          caption: 'quasar.dev',
-          icon: 'school',
-          link: 'https://quasar.dev'
+          title: 'Owner A',
+          caption: 'IG Yollandha',
+          icon: 'call',
+          link: 'https://instagram.com/yollandhaaa'
         },
         {
-          title: 'Github',
-          caption: 'github.com/quasarframework',
-          icon: 'code',
-          link: 'https://github.com/quasarframework'
-        },
-        {
-          title: 'Discord Chat Channel',
-          caption: 'chat.quasar.dev',
-          icon: 'chat',
-          link: 'https://chat.quasar.dev'
-        },
-        {
-          title: 'Forum',
-          caption: 'forum.quasar.dev',
-          icon: 'record_voice_over',
-          link: 'https://forum.quasar.dev'
-        },
-        {
-          title: 'Twitter',
-          caption: '@quasarframework',
-          icon: 'rss_feed',
-          link: 'https://twitter.quasar.dev'
-        },
-        {
-          title: 'Facebook',
-          caption: '@QuasarFramework',
-          icon: 'public',
-          link: 'https://facebook.quasar.dev'
+          title: 'Owner B',
+          caption: 'IG Fiqa',
+          icon: 'call',
+          link: 'https://instagram.com/strafiqa'
         }
       ]
     }

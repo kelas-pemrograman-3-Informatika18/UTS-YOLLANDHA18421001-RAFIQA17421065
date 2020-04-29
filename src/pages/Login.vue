@@ -1,11 +1,16 @@
 <template>
-  <q-page class="bg-grey-3">
+  <q-page class="bg-pink-11">
     <div class="row">
       <q-card class="fixed-center col-md-4 col-xs-12 bg-white" flat>
         <q-card-section>
           <div class="text-h6 q-pb-md">
-            Halaman Login
+            Welcome! Happy Shopping, Happy US
           </div>
+          <img
+      alt="Logo FIQYOL"
+      src="~assets/logo.png"
+      align="right"
+    >
           <q-form
             @submit="onSubmit"
             @reset="onReset"
@@ -14,24 +19,25 @@
             <q-input
               filled
               v-model="username"
-              label="Username Anda"
+              label="Your Username"
               lazy-rules
-              :rules="[ val => val && val.length > 0 || 'Tolong Ketik Username']"
+              :rules="[ val => val && val.length > 0 || 'Input Your Username']"
             />
 
             <q-input
               filled
               type="password"
               v-model="password"
-              label="Password Anda"
+              label="Your Password, not PasPort wkwk"
               lazy-rules
               :rules="[
-                val => val !== null && val.length > 0 || 'Password Tidak Boleh Kosong'
+                val => val !== null && val.length > 0 || 'Password cant be empty'
               ]"
             />
-            <div>
+            <div class="q-gutter-md">
               <q-btn label="Login" type="submit" color="primary"/>
-              <q-btn label="Reset" type="reset" color="primary" flat class="q-ml-sm" />
+              <q-btn label="Register" to="/register" flat color="red"/>
+              <!--<q-btn label="Reset" type="reset" color="primary" flat class="q-ml-sm" />-->
             </div>
         </q-form>
         </q-card-section>
@@ -49,16 +55,16 @@ export default {
   },
   methods: {
     onSubmit () {
-      if (this.username === 'fiqa' && this.password === '17421065') {
+      if (this.username === 'fiqyol' && this.password === '12345') {
         this.$q.notify({
           type: 'positive',
-          message: 'Selamat Berhasil Login'
+          message: 'Welcomeee'
         })
         this.$router.push('/home')
       } else {
         this.$q.notify({
           type: 'negative',
-          message: 'Gagal Login, Username/Password Salah'
+          message: 'failed, your Username/Password are wrong'
         })
       }
     },
