@@ -1,4 +1,4 @@
-# Quasar App (tugasfiqa1)
+# Quasar App (UTS)
 
 A Quasar Framework app
 
